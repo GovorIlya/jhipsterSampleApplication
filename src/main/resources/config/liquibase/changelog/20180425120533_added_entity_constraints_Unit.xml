@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Unit.
+    -->
+    <changeSet id="20180425120533-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="unit_description_id"
+                                 baseTableName="unit"
+                                 constraintName="fk_unit_unit_description_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="unit_description"/>
+
+        <addForeignKeyConstraint baseColumnNames="image_id"
+                                 baseTableName="unit"
+                                 constraintName="fk_unit_image_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="image"/>
+
+        <addForeignKeyConstraint baseColumnNames="research_method_id"
+                                 baseTableName="unit"
+                                 constraintName="fk_unit_research_method_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="research_method"/>
+
+        <addForeignKeyConstraint baseColumnNames="types_problems_id"
+                                 baseTableName="unit"
+                                 constraintName="fk_unit_types_problems_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="types_problems"/>
+
+        <addForeignKeyConstraint baseColumnNames="rating_method_id"
+                                 baseTableName="unit"
+                                 constraintName="fk_unit_rating_method_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="rating_method"/>
+
+    </changeSet>
+</databaseChangeLog>

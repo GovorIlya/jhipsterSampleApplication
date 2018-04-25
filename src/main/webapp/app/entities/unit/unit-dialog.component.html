@@ -1,0 +1,104 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myUnitLabel" jhiTranslate="jhipsterSampleApplicationApp.unit.home.createOrEditLabel">Create or edit a Unit</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!unit.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="unit.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationApp.unit.unitName" for="field_unitName">Unit Name</label>
+            <input type="text" class="form-control" name="unitName" id="field_unitName"
+                [(ngModel)]="unit.unitName" required/>
+            <div [hidden]="!(editForm.controls.unitName?.dirty && editForm.controls.unitName?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.unitName?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationApp.unit.unitCity" for="field_unitCity">Unit City</label>
+            <input type="text" class="form-control" name="unitCity" id="field_unitCity"
+                [(ngModel)]="unit.unitCity" required/>
+            <div [hidden]="!(editForm.controls.unitCity?.dirty && editForm.controls.unitCity?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.unitCity?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationApp.unit.unitStreet" for="field_unitStreet">Unit Street</label>
+            <input type="text" class="form-control" name="unitStreet" id="field_unitStreet"
+                [(ngModel)]="unit.unitStreet" required/>
+            <div [hidden]="!(editForm.controls.unitStreet?.dirty && editForm.controls.unitStreet?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.unitStreet?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationApp.unit.unitHouse" for="field_unitHouse">Unit House</label>
+            <input type="text" class="form-control" name="unitHouse" id="field_unitHouse"
+                [(ngModel)]="unit.unitHouse" required/>
+            <div [hidden]="!(editForm.controls.unitHouse?.dirty && editForm.controls.unitHouse?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.unitHouse?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationApp.unit.unitDescription" for="field_unitDescription">Unit Description</label>
+            <select class="form-control" id="field_unitDescription" name="unitDescription" [(ngModel)]="unit.unitDescription">
+                <option [ngValue]="null"></option>
+                <option [ngValue]="unitDescriptionOption.id === unit.unitDescription?.id ? unit.unitDescription : unitDescriptionOption" *ngFor="let unitDescriptionOption of unitdescriptions; trackBy: trackUnitDescriptionById">{{unitDescriptionOption.id}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationApp.unit.image" for="field_image">Image</label>
+            <select class="form-control" id="field_image" name="image" [(ngModel)]="unit.image">
+                <option [ngValue]="null"></option>
+                <option [ngValue]="imageOption.id === unit.image?.id ? unit.image : imageOption" *ngFor="let imageOption of images; trackBy: trackImageById">{{imageOption.id}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationApp.unit.researchMethod" for="field_researchMethod">Research Method</label>
+            <select class="form-control" id="field_researchMethod" name="researchMethod" [(ngModel)]="unit.researchMethod">
+                <option [ngValue]="null"></option>
+                <option [ngValue]="researchMethodOption.id === unit.researchMethod?.id ? unit.researchMethod : researchMethodOption" *ngFor="let researchMethodOption of researchmethods; trackBy: trackResearchMethodById">{{researchMethodOption.id}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationApp.unit.typesProblems" for="field_typesProblems">Types Problems</label>
+            <select class="form-control" id="field_typesProblems" name="typesProblems" [(ngModel)]="unit.typesProblems">
+                <option [ngValue]="null"></option>
+                <option [ngValue]="typesProblemsOption.id === unit.typesProblems?.id ? unit.typesProblems : typesProblemsOption" *ngFor="let typesProblemsOption of typesproblems; trackBy: trackTypesProblemsById">{{typesProblemsOption.id}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="jhipsterSampleApplicationApp.unit.ratingMethod" for="field_ratingMethod">Rating Method</label>
+            <select class="form-control" id="field_ratingMethod" name="ratingMethod" [(ngModel)]="unit.ratingMethod">
+                <option [ngValue]="null"></option>
+                <option [ngValue]="ratingMethodOption.id === unit.ratingMethod?.id ? unit.ratingMethod : ratingMethodOption" *ngFor="let ratingMethodOption of ratingmethods; trackBy: trackRatingMethodById">{{ratingMethodOption.id}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,23 @@
+
+{
+    "jhipsterSampleApplicationApp": {
+        "typesProblems" : {
+            "home": {
+                "title": "Types Problems",
+                "createLabel": "Создать новый Types Problems",
+                "createOrEditLabel": "Создать или отредактировать Types Problems"
+            },
+            "created": "Новый Types Problems создан с идентификатором {{ param }}",
+            "updated": "Types Problems обновлен с идентификатором {{ param }}",
+            "deleted": "Types Problems удален с идентификатором {{ param }}",
+            "delete": {
+                "question": "Вы уверены что хотите удалить Types Problems {{ id }}?"
+            },
+            "detail": {
+                "title": "Types Problems"
+            },
+            "typesMethod": "Types Method",
+            "unit": "Unit"
+        }
+    }
+}

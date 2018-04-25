@@ -1,0 +1,23 @@
+
+{
+    "jhipsterSampleApplicationApp": {
+        "unitDescription" : {
+            "home": {
+                "title": "Unit Descriptions",
+                "createLabel": "Create a new Unit Description",
+                "createOrEditLabel": "Create or edit a Unit Description"
+            },
+            "created": "A new Unit Description is created with identifier {{ param }}",
+            "updated": "A Unit Description is updated with identifier {{ param }}",
+            "deleted": "A Unit Description is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Unit Description {{ id }}?"
+            },
+            "detail": {
+                "title": "Unit Description"
+            },
+            "description": "Description",
+            "unit": "Unit"
+        }
+    }
+}

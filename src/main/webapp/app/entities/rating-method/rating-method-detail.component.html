@@ -1,0 +1,26 @@
+
+<div *ngIf="ratingMethod">
+    <h2><span jhiTranslate="jhipsterSampleApplicationApp.ratingMethod.detail.title">Rating Method</span> {{ratingMethod.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="jhipsterSampleApplicationApp.ratingMethod.ratingMethod">Rating Method</span></dt>
+        <dd>
+            <span>{{ratingMethod.ratingMethod}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'rating-method/'+ ratingMethod.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>
