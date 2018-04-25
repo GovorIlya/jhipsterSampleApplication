@@ -1,0 +1,52 @@
+entity Unit {
+	unitName String required,
+    unitCity String required,
+    unitStreet String required,
+	unitHouse String required
+    
+}
+
+entity UnitDescription {
+	description TextBlob
+}
+
+
+entity Image {
+	image ImageBlob
+}
+ entity ResearchMethod{
+	 researchMethod TextBlob
+ }
+ entity TypesProblems{
+	 typesMethod TextBlob
+ }
+ entity RatingMethod{
+	 ratingMethod TextBlob
+ }
+
+relationship OneToOne {
+	Unit{UnitDescription} to UnitDescription{unit}
+}
+
+relationship OneToOne {
+	Unit{image} to Image{unit}
+}
+relationship OneToOne {
+	Unit{ResearchMethod} to ResearchMethod{unit}
+}
+relationship OneToOne {
+	Unit{TypesProblems} to TypesProblems{unit}
+}
+relationship OneToOne {
+	Unit{RatingMethod} to RatingMethod{unit}
+}
+
+
+
+
+
+
+
+
+
+
