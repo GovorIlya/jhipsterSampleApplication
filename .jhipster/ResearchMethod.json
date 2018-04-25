@@ -1,0 +1,25 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "unit",
+            "otherEntityName": "unit",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "researchMethod"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "researchMethod",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        }
+    ],
+    "changelogDate": "20180425120536",
+    "entityTableName": "research_method",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

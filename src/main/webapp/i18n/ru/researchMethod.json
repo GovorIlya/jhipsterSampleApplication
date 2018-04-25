@@ -1,0 +1,23 @@
+
+{
+    "jhipsterSampleApplicationApp": {
+        "researchMethod" : {
+            "home": {
+                "title": "Research Methods",
+                "createLabel": "Создать новый Research Method",
+                "createOrEditLabel": "Создать или отредактировать Research Method"
+            },
+            "created": "Новый Research Method создан с идентификатором {{ param }}",
+            "updated": "Research Method обновлен с идентификатором {{ param }}",
+            "deleted": "Research Method удален с идентификатором {{ param }}",
+            "delete": {
+                "question": "Вы уверены что хотите удалить Research Method {{ id }}?"
+            },
+            "detail": {
+                "title": "Research Method"
+            },
+            "researchMethod": "Research Method",
+            "unit": "Unit"
+        }
+    }
+}

@@ -1,0 +1,30 @@
+
+{
+    "jhipsterSampleApplicationApp": {
+        "unit" : {
+            "home": {
+                "title": "Units",
+                "createLabel": "Создать новый Unit",
+                "createOrEditLabel": "Создать или отредактировать Unit"
+            },
+            "created": "Новый Unit создан с идентификатором {{ param }}",
+            "updated": "Unit обновлен с идентификатором {{ param }}",
+            "deleted": "Unit удален с идентификатором {{ param }}",
+            "delete": {
+                "question": "Вы уверены что хотите удалить Unit {{ id }}?"
+            },
+            "detail": {
+                "title": "Unit"
+            },
+            "unitName": "Unit Name",
+            "unitCity": "Unit City",
+            "unitStreet": "Unit Street",
+            "unitHouse": "Unit House",
+            "unitDescription": "Unit Description",
+            "image": "Image",
+            "researchMethod": "Research Method",
+            "typesProblems": "Types Problems",
+            "ratingMethod": "Rating Method"
+        }
+    }
+}

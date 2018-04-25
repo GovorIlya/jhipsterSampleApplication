@@ -1,0 +1,23 @@
+
+{
+    "jhipsterSampleApplicationApp": {
+        "ratingMethod" : {
+            "home": {
+                "title": "Rating Methods",
+                "createLabel": "Создать новый Rating Method",
+                "createOrEditLabel": "Создать или отредактировать Rating Method"
+            },
+            "created": "Новый Rating Method создан с идентификатором {{ param }}",
+            "updated": "Rating Method обновлен с идентификатором {{ param }}",
+            "deleted": "Rating Method удален с идентификатором {{ param }}",
+            "delete": {
+                "question": "Вы уверены что хотите удалить Rating Method {{ id }}?"
+            },
+            "detail": {
+                "title": "Rating Method"
+            },
+            "ratingMethod": "Rating Method",
+            "unit": "Unit"
+        }
+    }
+}

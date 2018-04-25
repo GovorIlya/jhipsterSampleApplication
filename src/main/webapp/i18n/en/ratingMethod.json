@@ -1,0 +1,23 @@
+
+{
+    "jhipsterSampleApplicationApp": {
+        "ratingMethod" : {
+            "home": {
+                "title": "Rating Methods",
+                "createLabel": "Create a new Rating Method",
+                "createOrEditLabel": "Create or edit a Rating Method"
+            },
+            "created": "A new Rating Method is created with identifier {{ param }}",
+            "updated": "A Rating Method is updated with identifier {{ param }}",
+            "deleted": "A Rating Method is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Rating Method {{ id }}?"
+            },
+            "detail": {
+                "title": "Rating Method"
+            },
+            "ratingMethod": "Rating Method",
+            "unit": "Unit"
+        }
+    }
+}

@@ -1,0 +1,23 @@
+
+{
+    "jhipsterSampleApplicationApp": {
+        "typesProblems" : {
+            "home": {
+                "title": "Types Problems",
+                "createLabel": "Create a new Types Problems",
+                "createOrEditLabel": "Create or edit a Types Problems"
+            },
+            "created": "A new Types Problems is created with identifier {{ param }}",
+            "updated": "A Types Problems is updated with identifier {{ param }}",
+            "deleted": "A Types Problems is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Types Problems {{ id }}?"
+            },
+            "detail": {
+                "title": "Types Problems"
+            },
+            "typesMethod": "Types Method",
+            "unit": "Unit"
+        }
+    }
+}

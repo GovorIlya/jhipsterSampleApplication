@@ -1,0 +1,25 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "unit",
+            "otherEntityName": "unit",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "image"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "image",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "image"
+        }
+    ],
+    "changelogDate": "20180425120535",
+    "entityTableName": "image",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}

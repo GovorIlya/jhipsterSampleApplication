@@ -1,0 +1,68 @@
+
+<div *ngIf="unit">
+    <h2><span jhiTranslate="jhipsterSampleApplicationApp.unit.detail.title">Unit</span> {{unit.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="jhipsterSampleApplicationApp.unit.unitName">Unit Name</span></dt>
+        <dd>
+            <span>{{unit.unitName}}</span>
+        </dd>
+        <dt><span jhiTranslate="jhipsterSampleApplicationApp.unit.unitCity">Unit City</span></dt>
+        <dd>
+            <span>{{unit.unitCity}}</span>
+        </dd>
+        <dt><span jhiTranslate="jhipsterSampleApplicationApp.unit.unitStreet">Unit Street</span></dt>
+        <dd>
+            <span>{{unit.unitStreet}}</span>
+        </dd>
+        <dt><span jhiTranslate="jhipsterSampleApplicationApp.unit.unitHouse">Unit House</span></dt>
+        <dd>
+            <span>{{unit.unitHouse}}</span>
+        </dd>
+        <dt><span jhiTranslate="jhipsterSampleApplicationApp.unit.unitDescription">Unit Description</span></dt>
+        <dd>
+            <div *ngIf="unit.unitDescription">
+                <a [routerLink]="['/unit-description', unit.unitDescription?.id]">{{unit.unitDescription?.id}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="jhipsterSampleApplicationApp.unit.image">Image</span></dt>
+        <dd>
+            <div *ngIf="unit.image">
+                <a [routerLink]="['/image', unit.image?.id]">{{unit.image?.id}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="jhipsterSampleApplicationApp.unit.researchMethod">Research Method</span></dt>
+        <dd>
+            <div *ngIf="unit.researchMethod">
+                <a [routerLink]="['/research-method', unit.researchMethod?.id]">{{unit.researchMethod?.id}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="jhipsterSampleApplicationApp.unit.typesProblems">Types Problems</span></dt>
+        <dd>
+            <div *ngIf="unit.typesProblems">
+                <a [routerLink]="['/types-problems', unit.typesProblems?.id]">{{unit.typesProblems?.id}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="jhipsterSampleApplicationApp.unit.ratingMethod">Rating Method</span></dt>
+        <dd>
+            <div *ngIf="unit.ratingMethod">
+                <a [routerLink]="['/rating-method', unit.ratingMethod?.id]">{{unit.ratingMethod?.id}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'unit/'+ unit.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

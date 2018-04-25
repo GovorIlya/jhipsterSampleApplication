@@ -1,0 +1,81 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "unitDescription",
+            "otherEntityName": "unitDescription",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "unit"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "image",
+            "otherEntityName": "image",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "unit"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "researchMethod",
+            "otherEntityName": "researchMethod",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "unit"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "typesProblems",
+            "otherEntityName": "typesProblems",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "unit"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "ratingMethod",
+            "otherEntityName": "ratingMethod",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "unit"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "unitName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "unitCity",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "unitStreet",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "unitHouse",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20180425120533",
+    "entityTableName": "unit",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false
+}
